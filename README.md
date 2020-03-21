@@ -6,7 +6,7 @@ Checkout all my rules [here](https://github.com/eneax/eslint-config-eneax/blob/m
 ## Install
 
 You can use eslint globally and/or locally per project.
-I prefer to install it locally per project, so I can have project specific settings:
+I prefer to install it locally per single project, so I can have project specific settings:
 
 - Create a `package.json` file with `npm init`.
 
@@ -24,12 +24,21 @@ npx install-peerdeps --dev eslint-config-eneax
 }
 ```
 
-- You can add two scripts to your package.json to lint and/or fix:
+- You can add two scripts to your package.json to lint and/or fix your code:
 
 ```json
 "scripts": {
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix"
+  "lint": "eslint <relative_path>",
+  "lint:fix": "eslint <relative_path> --fix"
+},
+```
+
+For instance, if all your code is in a `src/` folder:
+
+```json
+"scripts": {
+  "lint": "eslint src/",
+  "lint:fix": "eslint src/ --fix"
 },
 ```
 
@@ -60,10 +69,10 @@ For instance:
 
 ## VS Code
 
-If you use VS Code and want it to lint for you, here are the instructions:
+If you use VS Code and want it to lint all the errors for you, here are the instructions:
 
 - Install the [ESLint package](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- Setup VS Code settings via `Code` → `Preferences` → `Settings` or `Cmd + ,`:
+- Setup VS Code settings via `Code` → `Preferences` → `Settings`:
 
 ```json
 // These are all my auto-save configs
@@ -83,15 +92,9 @@ If you use VS Code and want it to lint for you, here are the instructions:
   "prettier.disableLanguages": ["javascript", "javascriptreact"],
 ```
 
-## Create React App
-
-- First `npm run eject` or `yarn eject`
-- Run `npx install-peerdeps --dev eslint-config-eneax`
-- Open `package.json` and replace `"extends": "react-app"` with `"extends": "eneax"`
-
 ## Not working?
 
-- Remove all eslint modules that we installed previously:
+- Remove all `eslint` modules that we installed previously:
 
 ```
 npm remove eslint-config-eneax babel-eslint eslint eslint-config-prettier eslint-config-airbnb eslint-plugin-html eslint-plugin-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react prettier eslint-plugin-react-hooks
