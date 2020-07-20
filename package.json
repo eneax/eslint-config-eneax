@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-eneax",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "ESLint and Prettier Config from Enea Xharja",
   "keywords": [
     "javascript",
