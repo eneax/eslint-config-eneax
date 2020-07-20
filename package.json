@@ -2,6 +2,9 @@
   "name": "eslint-config-eneax",
   "version": "1.0.10",
   "description": "ESLint and Prettier Config from Enea Xharja",
+  "author": "Enea Xharja <eneaxharja@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
   "keywords": [
     "javascript",
     "ecmascript",
@@ -10,13 +13,6 @@
     "config",
     "prettier"
   ],
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/eneax/eslint-config-eneax.git"
-  },
-  "author": "Enea Xharja <eneaxharja@gmail.com>",
-  "license": "MIT",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix"
@@ -46,5 +42,9 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "prettier": "^1.19.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eneax/eslint-config-eneax.git"
   }
 }
